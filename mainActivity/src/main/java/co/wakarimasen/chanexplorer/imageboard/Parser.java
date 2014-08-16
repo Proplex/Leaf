@@ -32,6 +32,9 @@ public class Parser {
 		int threadId;
 		int replies;
 		boolean isBoard = boardBoyerHtml.indexOf("<a href=\"#\">Post a Reply</a>") == -1;
+        if (isBoard == true) {
+            System.out.println("This is a board");
+        }
 		if (boardBoyerHtml.indexOf("<title>4chan - 404 Not Found</title>") != -1) {
             System.out.println("404, not found");
 			throw new NotFoundException();
