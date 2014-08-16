@@ -1,0 +1,37 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        applicationId 'co.wakarimasen.chanexplorer'
+        minSdkVersion 10
+        targetSdkVersion 19
+
+        ndk {
+            moduleName "gifdrawable"
+        }
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir 'src/main/libs'
+    }
+    productFlavors {
+    }
+}
+
+
+
+dependencies {
+    compile project(':slidingMenu')
+    compile 'com.android.support:support-v4:+'
+    compile 'com.google.guava:guava:13.0'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'com.android.support:support-v4:+'
+}

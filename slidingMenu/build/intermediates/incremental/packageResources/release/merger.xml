@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/home/david/work/ChanExplorer/slidingMenu/src/main/res" >
+            <file
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/values/attrs.xml"
+                qualifiers="" >
+                <declare-styleable name="SlidingMenu" >
+                    <attr
+                        name="viewAbove"
+                        format="reference" />
+                    <attr
+                        name="viewBehind"
+                        format="reference" />
+                    <attr
+                        name="behindOffset"
+                        format="dimension" />
+                    <attr
+                        name="behindWidth"
+                        format="dimension" />
+                    <attr
+                        name="behindScrollScale"
+                        format="float" />
+                    <attr name="aboveTouchMode" >
+                        <enum
+                            name="margin"
+                            value="0" />
+                        <enum
+                            name="fullscreen"
+                            value="1" />
+                    </attr>
+                    <attr name="behindTouchMode" >
+                        <enum
+                            name="margin"
+                            value="0" />
+                        <enum
+                            name="fullscreen"
+                            value="1" />
+                    </attr>
+                    <attr
+                        name="shadowDrawable"
+                        format="reference" />
+                    <attr
+                        name="shadowWidth"
+                        format="dimension" />
+                    <attr
+                        name="behindFadeEnabled"
+                        format="boolean" />
+                    <attr
+                        name="behindFadeDegree"
+                        format="float" />
+                </declare-styleable>
+            </file>
+            <file
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/values/colors.xml"
+                qualifiers="" >
+                <color name="holo_blue_bright" >#ff00ddff
+                </color>
+            </file>
+            <file
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/values/dimen.xml"
+                qualifiers="" >
+                <dimen name="menu_header_padding_top" >8dp
+                </dimen>
+                <dimen name="menu_icon_side" >40dp
+                </dimen>
+                <dimen name="menu_header_line" >3dp
+                </dimen>
+                <dimen name="menu_item_padding" >10dp
+                </dimen>
+            </file>
+            <file
+                name="defaultshadow"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/drawable/defaultshadow.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="header_background"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/drawable/header_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_section_divider_holo_custom"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/drawable/list_section_divider_holo_custom.9.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/layout/list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="slidingmenumain"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/layout/slidingmenumain.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="shadow"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/layout/shadow.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="slidingmenurow"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/layout/slidingmenurow.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="slidingmenumainlist"
+                path="/home/david/work/ChanExplorer/slidingMenu/src/main/res/layout/slidingmenumainlist.xml"
+                qualifiers=""
+                type="layout" />
+        </source>
+        <source path="/home/david/work/ChanExplorer/slidingMenu/build/generated/res/rs/release" />
+        <source path="/home/david/work/ChanExplorer/slidingMenu/build/generated/res/generated/release" />
+    </dataSet>
+    <dataSet config="release" >
+        <source path="/home/david/work/ChanExplorer/slidingMenu/src/release/res" />
+    </dataSet>
+
+</merger>

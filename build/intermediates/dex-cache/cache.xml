@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/david/work/ChanExplorer/mainActivity/build/intermediates/pre-dexed/debug/classes-a7a2159df8718053e3395fc4cc99d1c9e44a3454.jar"
+        jar="/home/david/work/ChanExplorer/build/intermediates/exploded-aar/ChanExplorer/slidingMenu/unspecified/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="eb4c0233b474fa701191ea0d7f89cbafc35e310c"/>
+    <item
+        dex="/home/david/work/ChanExplorer/mainActivity/build/intermediates/pre-dexed/debug/actionbarsherlock-plugin-maps-4.1.0-a8ca44903a3cf86ab260062a79a8357d2d3db601.jar"
+        jar="/home/david/work/ChanExplorer/build/intermediates/exploded-aar/ChanExplorer/slidingMenu/unspecified/libs/actionbarsherlock-plugin-maps-4.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c1d0871af0b016f4e170fbb3529e67192cc0b19d"/>
+    <item
+        dex="/home/david/work/ChanExplorer/mainActivity/build/intermediates/pre-dexed/debug/guava-13.0-b4699f40330e5230977e663d8250a439508e4336.jar"
+        jar="/home/david/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/13.0/d6f92000cabd7bf4418789497e396b9c56820ef1/guava-13.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d6f92000cabd7bf4418789497e396b9c56820ef1"/>
+    <item
+        dex="/home/david/work/ChanExplorer/mainActivity/build/intermediates/pre-dexed/debug/android-support-v13-8a171339d6d4d8ac62bd86ede852378e7496e6c4.jar"
+        jar="/home/david/work/ChanExplorer/build/intermediates/exploded-aar/ChanExplorer/slidingMenu/unspecified/libs/android-support-v13.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0a0cf96dabecd7b65a3638a229e7bdb42e6b0a77"/>
+    <item
+        dex="/home/david/work/ChanExplorer/mainActivity/build/intermediates/pre-dexed/debug/classes-2085efba9f1352ffc163fff35ce55e1a29ef673d.jar"
+        jar="/home/david/work/ChanExplorer/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49"/>
+    <item
+        dex="/home/david/work/ChanExplorer/mainActivity/build/intermediates/pre-dexed/debug/support-v4-19.1.0-1bd09adae01d10f8f097a7c54535018843cfa550.jar"
+        jar="/opt/android-studio/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+
+</pre-dex-items>
