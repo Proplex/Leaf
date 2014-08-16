@@ -71,6 +71,7 @@ public class Parser {
 							}
 						}
 					}
+                    System.out.println(threadId);
 				}
 
 				// isAdmin
@@ -79,7 +80,7 @@ public class Parser {
 					post.setAdmin(true);
 				}
 				// isMod
-				if (getBetween("<span class=\"name\">", "</span>", boardHtml, boardBoyerHtml, postPos).indexOf("\"color:#800080\"") != -1) {
+                if (getBetween("<span class=\"nameBlock", "<span class=\"name\">", boardHtml, boardBoyerHtml, postPos).indexOf("capcodeMod") != -1) {
                     System.out.println("Poster is mod");
 					post.setMod(true);
 				}
@@ -106,11 +107,11 @@ public class Parser {
 				post.setEmail(null);
 
 				// Name
-				if (post.isMod()) {
-					post.setName((getBetween("style=\"color:#800080\">", "</span>", boardHtml, boardBoyerHtml, postPos)));
-				} else {
+				//if (post.isMod()) {
+				//	post.setName((getBetween("style=\"color:#800080\">", "</span>", boardHtml, boardBoyerHtml, postPos)));
+			//	} else {
 					post.setName((getBetween("<span class=\"name\">", "</span>", boardHtml, boardBoyerHtml, postPos)));
-				}
+			//	}
 				// Trip
 				post.setTripcode(null);
 				if (namesubject.indexOf("postertrip") != -1) {
@@ -147,6 +148,7 @@ public class Parser {
                     } else {
                         post.setFileDeleted(false);
                         post.setImage((getBetween("File: <a href=\"", "\"", boardHtml, boardBoyerHtml, postPos)));
+
                         if (fileInfo.indexOf("<span title=") == -1) {
                             post.setFilename((getBetween("<span>", "</span>", boardHtml, boardBoyerHtml, boardBoyerHtml.indexOf("<div class=\"file", postPos))));
                         } else {

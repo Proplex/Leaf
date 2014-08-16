@@ -245,25 +245,21 @@ public class Post implements Parcelable {
 		this.thumbnail = thumbnail;
 	}
 
-	public String getImage() {
-		return image;
-	}
+	public String getImage() { return image; }
 
 	public void setImage(String image) {
 		this.image = image;
+        System.out.println("Image at "+image);
 	}
 
-	public long getTimestamp() {
-		return timestamp;
-	}
+	public long getTimestamp() { return timestamp; }
 	
-	public Timestamp getSqlTimestamp() {
-		return timestamp_obj;
-	}
+	public Timestamp getSqlTimestamp() { return timestamp_obj; }
 
 	public void setTimestamp(long timestamp) {
 		this.timestamp = timestamp;
 		timestamp_obj = new Timestamp(timestamp * 1000);
+        System.out.println("Timestamp: "+timestamp);
 	}
 
 	public int getId() {
@@ -272,6 +268,7 @@ public class Post implements Parcelable {
 
 	public void setId(int id) {
 		this.id = id;
+        System.out.println("Post ID: "+id);
 	}
 
 	public String getFilename() {
@@ -280,6 +277,7 @@ public class Post implements Parcelable {
 
 	public void setFilename(String filename) {
 		this.filename = HTMLEntities.unhtmlentities(filename);
+        System.out.println("Filename: "+filename);
 	}
 
 	public int getWidth() {
@@ -288,6 +286,7 @@ public class Post implements Parcelable {
 
 	public void setWidth(int width) {
 		this.width = width;
+        System.out.println("File width: "+width);
 	}
 
 	public int getHeight() {
@@ -296,6 +295,7 @@ public class Post implements Parcelable {
 
 	public void setHeight(int height) {
 		this.height = height;
+        System.out.println("File height: "+height);
 	}
 
 	public int getThreadId() {
@@ -344,6 +344,7 @@ public class Post implements Parcelable {
 
 	public void setTripcode(String tripcode) {
 		this.tripcode = tripcode;
+        System.out.println("Poster tripcode: "+tripcode);
 	}
 
 	public int getThWidth() {
@@ -373,6 +374,7 @@ public class Post implements Parcelable {
 	public void setOmitted(int omitted_posts, int omitted_images) {
 		this.omitted_posts = omitted_posts;
 		this.omitted_images = omitted_images;
+        System.out.println("Omitted Posts "+omitted_posts+" and "+omitted_images+" ommited images");
 	}
 
 	public boolean hasOmitted() {
@@ -385,6 +387,7 @@ public class Post implements Parcelable {
 
 	public void setTooLong(boolean isTooLong) {
 		this.isTooLong = isTooLong;
+        System.out.println("ERR:"+isTooLong);
 	}
 
 	public boolean isLocked() {
@@ -416,6 +419,7 @@ public class Post implements Parcelable {
 
 	public void setFilesize(String filesize) {
 		this.filesize = filesize;
+        System.out.println("Filesize: "+filesize);
 	}
 
 	public boolean isSpoiler() {
