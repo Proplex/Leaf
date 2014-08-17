@@ -57,7 +57,8 @@ public class Parser {
 				Post post = new Post(greenTextColor);
 				post.setThreadId(threadId);
 				post.setId(parseInt(getBetween("id=\"pc", "\"", boardHtml, boardBoyerHtml, postPos)));
-				String namesubject = getBetween("<span class=\"name\">", "<span class=\"subject\">", boardHtml, boardBoyerHtml, postPos);
+				// THIS LINE CAUSES ISSUES: String namesubject = getBetween("<span class=\"name\">", "<span class=\"subject\">", boardHtml, boardBoyerHtml, postPos);
+                String namesubject = "Test";
 				if (post.isThread()) {
 					if (getBetween("</blockquote>", "<hr>", boardHtml, boardBoyerHtml, postPos).indexOf("class=\"summary desktop\"") != -1) {
 						String oms = getBetween("<span class=\"summary desktop\">", "</span>", boardHtml, boardBoyerHtml, postPos);
@@ -71,7 +72,7 @@ public class Parser {
 							}
 						}
 					}
-                    System.out.println(threadId);
+
 				}
 
 				// isAdmin
@@ -149,8 +150,8 @@ public class Parser {
                         post.setFileDeleted(false);
                         post.setImage((getBetween("File: <a href=\"", "\"", boardHtml, boardBoyerHtml, postPos)));
 
-                        if (fileInfo.indexOf("<span title=") == -1) {
-                            post.setFilename((getBetween("<span>", "</span>", boardHtml, boardBoyerHtml, boardBoyerHtml.indexOf("<div class=\"file", postPos))));
+                        if (fileInfo.indexOf("<div class=\"fileText\"") == -1) {
+                            post.setFilename((getBetween("target=\"_blank\">", "</a>", boardHtml, boardBoyerHtml, boardBoyerHtml.indexOf("<div class=\"file", postPos))));
                         } else {
                             post.setFilename((getBetween("<span title=\"", "\"", boardHtml, boardBoyerHtml, boardBoyerHtml.indexOf("<div class=\"file", postPos))));
                         }
@@ -243,7 +244,7 @@ public class Parser {
 		try {
 			return new String(haystack.substring((start_from = haystack.indexOf(start, start_from)+start.length()), haystack.indexOf(end, start_from)));
 		} catch (StringIndexOutOfBoundsException e) {
-            System.out.println("String");
+
 			throw new ChanParserException("String index out of bounds. Haystack Length: "+haystack.length());
 		}
 	}
@@ -252,7 +253,8 @@ public class Parser {
         try {
             return new String(haystack.substring((start_from = boyer.indexOf(start, start_from)+start.length()), boyer.indexOf(end, start_from)));
         } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("String2");
+            System.out.println("String index out of bounds. Haystack Length: "+haystack.length());
+            e.printStackTrace();
             throw new ChanParserException("String index out of bounds. Haystack Length: "+haystack.length());
         }
     }

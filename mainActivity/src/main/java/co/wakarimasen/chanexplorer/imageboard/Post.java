@@ -84,6 +84,7 @@ public class Post implements Parcelable {
 
 	public void setName(String name) {
 		this.name = name;
+        System.out.println("Post name: "+name);
 	}
 
 	public String getEmail() {
@@ -100,6 +101,7 @@ public class Post implements Parcelable {
 
 	public void setSubject(String subject) {
 		this.subject = subject;
+        System.out.println("Thread subject: "+subject);
 	}
 
 	public String getComment() {
@@ -166,6 +168,8 @@ public class Post implements Parcelable {
 									.indexOf("<br><br><strong style=\"color: red;\">(USER WAS BANNED FOR THIS POST)</strong>"));
 		}
 		parseComment();
+        System.out.println("Comment: "+spannedComment);
+
 	}
 	
 	private void parseComment() {
@@ -276,7 +280,9 @@ public class Post implements Parcelable {
 	}
 
 	public void setFilename(String filename) {
+
 		this.filename = HTMLEntities.unhtmlentities(filename);
+        filename = "test";
         System.out.println("Filename: "+filename);
 	}
 
@@ -304,6 +310,7 @@ public class Post implements Parcelable {
 
 	public void setThreadId(int thread_id) {
 		this.thread_id = thread_id;
+        System.out.println("Thread ID: "+thread_id);
 	}
 
 	public String getPosterId() {
@@ -387,7 +394,7 @@ public class Post implements Parcelable {
 
 	public void setTooLong(boolean isTooLong) {
 		this.isTooLong = isTooLong;
-        System.out.println("ERR:"+isTooLong);
+        System.out.println("Truncating Post");
 	}
 
 	public boolean isLocked() {
