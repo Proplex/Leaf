@@ -4,7 +4,7 @@
     android:background="#333333" >
 
     <view
-   class="co.wakarimasen.chanexplorer.ImageViewPager"
+   class="co.wakarimasen.ceredux.ImageViewPager"
     android:id="@+id/mainPager"
     android:layout_width="match_parent"
     android:layout_height="match_parent">

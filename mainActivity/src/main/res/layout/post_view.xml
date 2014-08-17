@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<co.wakarimasen.chanexplorer.PostView xmlns:android="http://schemas.android.com/apk/res/android"
+<co.wakarimasen.ceredux.PostView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     >
 
-    <co.wakarimasen.chanexplorer.PostMainView
+    <co.wakarimasen.ceredux.PostMainView
         android:id="@+id/main_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                 android:layout_marginLeft="2dp"
                 android:orientation="horizontal" >
 
-                <co.wakarimasen.chanexplorer.PostImage
+                <co.wakarimasen.ceredux.PostImage
                     android:id="@+id/poster_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -194,7 +194,7 @@
             android:layout_gravity="bottom|right"
             android:background="@drawable/button_selector_holo"
             android:src="@drawable/ic_post_more_holo" />
-    </co.wakarimasen.chanexplorer.PostMainView>
+    </co.wakarimasen.ceredux.PostMainView>
 
     <RelativeLayout
         android:id="@+id/post_options"
@@ -367,4 +367,4 @@
         </HorizontalScrollView>
     </RelativeLayout>
 
-</co.wakarimasen.chanexplorer.PostView>
+</co.wakarimasen.ceredux.PostView>

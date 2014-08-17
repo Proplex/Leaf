@@ -2,7 +2,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <view class="co.wakarimasen.chanexplorer.PinnedHeaderListView"
+    <view class="co.wakarimasen.ceredux.PinnedHeaderListView"
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <string name="app_name">ChanExplorer</string>
+    <string name="app_name">Leaf</string>
     <string name="title_activity_main">/4/</string>
     <string name="menu_reply">Post</string>
     <string name="menu_refresh">Refresh</string>
@@ -151,7 +151,6 @@
         <item>/p/ - Photography</item>
         <item>/po/ - Papercraft &amp; Origami</item>
         <item>/pol/ - Politically Incorrect</item>
-        <item>/q/ - 4chan Discussion</item>
         <item>/r/ - Request</item>
         <item>/r9k/ - ROBOT9001</item>
         <item>/s/ - Sexy Beautiful Women</item>
@@ -209,7 +208,6 @@
         <item>p</item>
         <item>po</item>
         <item>pol</item>
-        <item>q</item>
         <item>r</item>
         <item>r9k</item>
         <item>s</item>

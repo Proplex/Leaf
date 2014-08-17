@@ -4,7 +4,7 @@ android {
     compileSdkVersion 19
     buildToolsVersion '19.1.0'
     defaultConfig {
-        applicationId 'co.wakarimasen.chanexplorer'
+        applicationId 'co.wakarimasen.ceredux'
         minSdkVersion 10
         targetSdkVersion 19
 

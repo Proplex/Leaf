@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <co.wakarimasen.chanexplorer.SuperViewPager
+    <co.wakarimasen.ceredux.SuperViewPager
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainPager"
     android:layout_width="match_parent"
@@ -17,6 +17,6 @@
         android:textColor="#fff"
         android:paddingBottom="1dp"
         android:textSize="13sp" />
-        </co.wakarimasen.chanexplorer.SuperViewPager>
+        </co.wakarimasen.ceredux.SuperViewPager>
 
 </LinearLayout>

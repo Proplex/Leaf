@@ -18,7 +18,7 @@
             android:title="Theme"
             />
 
-        <co.wakarimasen.chanexplorer.MultiSelectListPreference
+        <co.wakarimasen.ceredux.MultiSelectListPreference
             android:defaultValue="@string/default_hidden"
             android:dialogTitle="Hidden Boards"
             android:entries="@array/boards_options"
@@ -44,14 +44,14 @@
             android:title="Thread Replies" />
       <!--     
         <CheckBoxPreference
-            android:key="co.wakarimasen.chanexplorer.prefs.spoilers"
+            android:key="ceredux.prefs.spoilers"
             android:summary="Enable spoliers. Tap to reveal."
             android:defaultValue="true"
             android:title="Spoilers" />
  -->
       <!--   
         <CheckBoxPreference
-            android:key="co.wakarimasen.chanexplorer.prefs.disable_gif"
+            android:key="ceredux.prefs.disable_gif"
             android:summary="Animated GIFs can cause force closes on pre-ICS phones. Check to disable animations."
             android:defaultValue="false"
             android:title="Disable GIF" /> -->
@@ -71,7 +71,7 @@
             android:title="Email" />
         <!--
         <EditTextPreference
-        android:key="co.wakarimasen.chanexplorer.prefs.password"
+        android:key="ceredux.prefs.password"
         android:summary="Please enter your login username"
         android:title="Username" />
         -->
@@ -97,7 +97,7 @@
             android:title="Auto-Update Units" />
 <!-- 
         <CheckBoxPreference
-            android:key="co.wakarimasen.chanexplorer.prefs.auto_updater_notify"
+            android:key="ceredux.prefs.auto_updater_notify"
             android:summary=""
             android:title="Notify For New Posts" /> -->
     </PreferenceCategory>
@@ -126,7 +126,7 @@
             android:defaultValue="0"
             android:entries="@array/preload_options"
             android:entryValues="@array/preload_values"
-            android:key="co.wakarimasen.chanexplorer.prefs.preload"
+            android:key="ceredux.prefs.preload"
             android:summary="Never"
             android:title="Preload Images"
             android:enabled="false" /> -->
@@ -157,12 +157,11 @@
         android:title="About" >
         <Preference
             android:enabled="false"
-            android:summary="chanexplorer.wakarimasen.co"
-            android:title="Home" />
+            android:title="CE Redux" />
         
         <Preference
             android:enabled="false"
-            android:summary="2.2.3"
+            android:summary="1.0"
             android:title="Version" />
     </PreferenceCategory>
 
