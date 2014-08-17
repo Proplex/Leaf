@@ -84,7 +84,7 @@ public class Post implements Parcelable {
 
 	public void setName(String name) {
 		this.name = name;
-        System.out.println("Post name: "+name);
+        //DEBUG: System.out.println("Post name: "+name);
 	}
 
 	public String getEmail() {
@@ -100,8 +100,11 @@ public class Post implements Parcelable {
 	}
 
 	public void setSubject(String subject) {
+        if (subject.contains("<head>") || subject.contains ("<span")) {
+            subject = ("");
+        }
 		this.subject = subject;
-        System.out.println("Thread subject: "+subject);
+        //DEBUG: System.out.println("Thread subject: "+subject);
 	}
 
 	public String getComment() {
@@ -168,7 +171,7 @@ public class Post implements Parcelable {
 									.indexOf("<br><br><strong style=\"color: red;\">(USER WAS BANNED FOR THIS POST)</strong>"));
 		}
 		parseComment();
-        System.out.println("Comment: "+spannedComment);
+        //DEBUG: System.out.println("Comment: "+spannedComment);
 
 	}
 	
@@ -253,7 +256,7 @@ public class Post implements Parcelable {
 
 	public void setImage(String image) {
 		this.image = image;
-        System.out.println("Image at "+image);
+        //DEBUG: System.out.println("Image at "+image);
 	}
 
 	public long getTimestamp() { return timestamp; }
@@ -263,7 +266,7 @@ public class Post implements Parcelable {
 	public void setTimestamp(long timestamp) {
 		this.timestamp = timestamp;
 		timestamp_obj = new Timestamp(timestamp * 1000);
-        System.out.println("Timestamp: "+timestamp);
+        //DEBUG: System.out.println("Timestamp: "+timestamp);
 	}
 
 	public int getId() {
@@ -272,7 +275,7 @@ public class Post implements Parcelable {
 
 	public void setId(int id) {
 		this.id = id;
-        System.out.println("Post ID: "+id);
+        //DEBUG: System.out.println("Post ID: "+id);
 	}
 
 	public String getFilename() {
@@ -283,7 +286,7 @@ public class Post implements Parcelable {
 
 		this.filename = HTMLEntities.unhtmlentities(filename);
         filename = "test";
-        System.out.println("Filename: "+filename);
+        //DEBUG: System.out.println("Filename: "+filename);
 	}
 
 	public int getWidth() {
@@ -292,7 +295,7 @@ public class Post implements Parcelable {
 
 	public void setWidth(int width) {
 		this.width = width;
-        System.out.println("File width: "+width);
+        //DEBUG: System.out.println("File width: "+width);
 	}
 
 	public int getHeight() {
@@ -301,7 +304,7 @@ public class Post implements Parcelable {
 
 	public void setHeight(int height) {
 		this.height = height;
-        System.out.println("File height: "+height);
+        //DEBUG: System.out.println("File height: "+height);
 	}
 
 	public int getThreadId() {
@@ -310,7 +313,7 @@ public class Post implements Parcelable {
 
 	public void setThreadId(int thread_id) {
 		this.thread_id = thread_id;
-        System.out.println("Thread ID: "+thread_id);
+        //DEBUG: System.out.println("Thread ID: "+thread_id);
 	}
 
 	public String getPosterId() {
@@ -351,7 +354,7 @@ public class Post implements Parcelable {
 
 	public void setTripcode(String tripcode) {
 		this.tripcode = tripcode;
-        System.out.println("Poster tripcode: "+tripcode);
+        //DEBUG: System.out.println("Poster tripcode: "+tripcode);
 	}
 
 	public int getThWidth() {
@@ -381,7 +384,7 @@ public class Post implements Parcelable {
 	public void setOmitted(int omitted_posts, int omitted_images) {
 		this.omitted_posts = omitted_posts;
 		this.omitted_images = omitted_images;
-        System.out.println("Omitted Posts "+omitted_posts+" and "+omitted_images+" ommited images");
+        //DEBUG: System.out.println("Omitted Posts "+omitted_posts+" and "+omitted_images+" ommited images");
 	}
 
 	public boolean hasOmitted() {
@@ -394,7 +397,7 @@ public class Post implements Parcelable {
 
 	public void setTooLong(boolean isTooLong) {
 		this.isTooLong = isTooLong;
-        System.out.println("Truncating Post");
+        //DEBUG: System.out.println("Truncating Post");
 	}
 
 	public boolean isLocked() {
@@ -426,7 +429,7 @@ public class Post implements Parcelable {
 
 	public void setFilesize(String filesize) {
 		this.filesize = filesize;
-        System.out.println("Filesize: "+filesize);
+        //DEBUG: System.out.println("Filesize: "+filesize);
 	}
 
 	public boolean isSpoiler() {

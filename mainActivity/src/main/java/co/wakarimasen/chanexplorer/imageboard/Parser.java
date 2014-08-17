@@ -33,14 +33,14 @@ public class Parser {
 		int replies;
 		boolean isBoard = boardBoyerHtml.indexOf("<a href=\"#\">Post a Reply</a>") == -1;
         if (isBoard == true) {
-            System.out.println("This is a board");
+            //DEBUG: System.out.println("This is a board");
         }
 		if (boardBoyerHtml.indexOf("<title>4chan - 404 Not Found</title>") != -1) {
-            System.out.println("404, not found");
+            //DEBUG: System.out.println("404, not found");
 			throw new NotFoundException();
 		}
 		if (boardBoyerHtml.indexOf("<title>4chan - Banned</title>") != -1) {
-            System.out.println("User is banned");
+            //DEBUG: System.out.println("User is banned");
 			throw new BannedException();
 		}
 		while ((threadPos = boardBoyerHtml.indexOf("<div class=\"thread\"", parserPos)) != -1) {
@@ -77,22 +77,22 @@ public class Parser {
 
 				// isAdmin
 				if (getBetween("<span class=\"nameBlock", "<span class=\"name\">", boardHtml, boardBoyerHtml, postPos).indexOf("capcodeAdmin") != -1) {
-                    System.out.println("Poster is admin");
+                    //DEBUG: System.out.println("Poster is admin");
 					post.setAdmin(true);
 				}
 				// isMod
                 if (getBetween("<span class=\"nameBlock", "<span class=\"name\">", boardHtml, boardBoyerHtml, postPos).indexOf("capcodeMod") != -1) {
-                    System.out.println("Poster is mod");
+                    //DEBUG: System.out.println("Poster is mod");
 					post.setMod(true);
 				}
 				// isLocked
 				if (namesubject.indexOf("title=\"Closed\"") != -1) {
-                    System.out.println("Thread locked");
+                    //DEBUG: System.out.println("Thread locked");
 					post.setLocked(true);
 				}
 				// isSticky
 				if (namesubject.indexOf("title=\"Sticky\"") != -1) {
-                    System.out.println("Thread is sticky");
+                    //DEBUG: System.out.println("Thread is sticky");
 					post.setSticky(true);
 				}
 				// idenIcon
@@ -116,7 +116,7 @@ public class Parser {
 				// Trip
 				post.setTripcode(null);
 				if (namesubject.indexOf("postertrip") != -1) {
-                    System.out.println("Post is using a trip");
+                    //DEBUG: System.out.println("Post is using a trip");
 					post.setTripcode((getBetween("<span class=\"postertrip\">", "</span>", boardHtml, boardBoyerHtml, postPos)));
 				}
 				// Id
@@ -141,7 +141,7 @@ public class Parser {
 
 				// File
                 if (getBetween("<span class=\"nameBlock", "</blockquote>", boardHtml, boardBoyerHtml, postPos).indexOf("class=\"file\"") != -1) {
-                    System.out.println("post has a file");
+                    //DEBUG: System.out.println("post has a file");
                     post.setFile(true);
                     String fileInfo = getBetween("<div class=\"fileText\"", "</div>", boardHtml, boardBoyerHtml, postPos);
                     if (fileInfo.length() == 0) {
@@ -182,7 +182,7 @@ public class Parser {
 			parserPos = finalPost;
 		}
 		if (posts.size() == 0) {
-            System.out.println("No posts were found");
+            //DEBUG: System.out.println("No posts were found");
 			throw new ChanParserException("No posts were found.");
 		}
 		//for (int i=posts.size()-1; i>=0; i--) {
@@ -212,10 +212,10 @@ public class Parser {
 				}
 			}
 		} else {
-            System.out.println("final_post");
+            //DEBUG: System.out.println("final_post");
 			posts.toArray(final_posts);
 		}
-        System.out.println("TESTICLES");
+        //DEBUG: System.out.println("TESTICLES");
 		return final_posts;
 
 	}
@@ -225,7 +225,7 @@ public class Parser {
 		try {
 			return Integer.parseInt(str);
 		} catch (NumberFormatException e) {
-            System.out.println("parsererr");
+            //DEBUG: System.out.println("parsererr");
 			throw new ChanParserException("Tried to parse "+str+" into integer.");
 		}
 	}
@@ -234,7 +234,7 @@ public class Parser {
 		try {
 			return Long.parseLong(str);
 		} catch (NumberFormatException e) {
-            System.out.println("parser err");
+            //DEBUG: System.out.println("parser err");
 			throw new ChanParserException("Tried to parse "+str+" into Long.");
 
 		}
@@ -253,7 +253,7 @@ public class Parser {
         try {
             return new String(haystack.substring((start_from = boyer.indexOf(start, start_from)+start.length()), boyer.indexOf(end, start_from)));
         } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("String index out of bounds. Haystack Length: "+haystack.length());
+            //DEBUG: System.out.println("String index out of bounds. Haystack Length: "+haystack.length());
             e.printStackTrace();
             throw new ChanParserException("String index out of bounds. Haystack Length: "+haystack.length());
         }
