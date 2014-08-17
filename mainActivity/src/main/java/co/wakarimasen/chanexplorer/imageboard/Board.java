@@ -74,7 +74,6 @@ public class Board {
 		boards.add(new Board("t", "Torrents", adult, false));
 		boards.add(new Board("hr", "High Resolution", adult, false));
 		boards.add(new Board("gif", "Animated GIF", adult, false));
-		boards.add(new Board("q", "4chan Discussion", other, true));
 		boards.add(new Board("trv", "Travel", other, true));
 		boards.add(new Board("fit", "Health & Fitness", other, true));
 		boards.add(new Board("x", "Paranormal", other, true));
