@@ -59,8 +59,12 @@ public class Parser {
 				post.setId(parseInt(getBetween("id=\"pc", "\"", boardHtml, boardBoyerHtml, postPos)));
 				// THIS LINE CAUSES ISSUES: String namesubject = getBetween("<span class=\"name\">", "<span class=\"subject\">", boardHtml, boardBoyerHtml, postPos);
                 String namesubject = "Test";
+                post.setSubject("");
 				if (post.isThread()) {
 					if (getBetween("</blockquote>", "<hr>", boardHtml, boardBoyerHtml, postPos).indexOf("class=\"summary desktop\"") != -1) {
+                        if (boardBoyerHtml.indexOf("<span class=\"subject\">") != -1) {
+                            post.setSubject((getBetween("<span class=\"subject\">", "</span>", boardHtml, boardBoyerHtml, boardBoyerHtml.indexOf("postInfo desktop", postPos))));
+                        }
 						String oms = getBetween("<span class=\"summary desktop\">", "</span>", boardHtml, boardBoyerHtml, postPos);
 						Matcher m1 = post_image_omitted.matcher(oms);
 						if (m1.find()) {
@@ -133,7 +137,7 @@ public class Parser {
 					post.setFlag(null);
 				}
 				// Subject
-				post.setSubject((getBetween("<span class=\"subject\">", "</span>", boardHtml, boardBoyerHtml, boardBoyerHtml.indexOf("postInfo desktop", postPos))));
+
 				// Date
 				post.setTimestamp(parseLong(getBetween("data-utc=\"", "\"", boardHtml, boardBoyerHtml, postPos)));
 				// Comment
