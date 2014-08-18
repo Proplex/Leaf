@@ -93,9 +93,9 @@ public class Theme {
 			action_icon = R.drawable.ic_launcher;
 			action_bar_bg = 0xFFD1D5EE;
 			action_bar_text = 0xFFAF0A0F;
-			ic_action_reply = R.drawable.ic_action_reply_yb;
-			ic_action_refresh = R.drawable.ic_action_reload_yb;
-			ic_action_close = R.drawable.ic_action_cancel_yb;
+			ic_action_reply = R.drawable.ic_action_reply_yotsuba_blue;
+			ic_action_refresh = R.drawable.ic_action_refresh_yotsuba_blue;
+			ic_action_close = R.drawable.ic_action_close_yotsuba_blue;
 			ic_action_jump = R.drawable.ic_action_jump_yotsuba_blue;
 			pager_title_bg = 0xFFAF0A0F;
 			pager_title_text = 0xFFFFFFFF;
